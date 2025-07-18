@@ -1,0 +1,34 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+dist/
+
+# dotenv files (environment variables)
+.env
+.env.*
+
+# Logs
+logs/
+*.log
+*.csv
+
+# OS/IDE specific
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Build & Cache
+.cache/
+build/
+tmp/
+*.tmp
+
+# Frontend dependencies (optional)
+client/node_modules/
+
+# PostgreSQL dump files (if any)
+*.sql
+*.dump
