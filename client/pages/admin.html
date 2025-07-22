@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="admin.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+</head>
+<body>
+  <header>
+    <h1>Admin Dashboard</h1>
+    <button id="logoutBtn">Logout</button>
+  </header>
+
+  <div class="dashboard">
+    <div class="card" onclick="showSection('postMenu')">
+      <h3>Post Orders</h3>
+      <p>Create menu for a selected date</p>
+    </div>
+
+    <div class="card" onclick="showSection('todayOrders')">
+      <h3>Today's Orders</h3>
+      <p>View and manage today's bookings</p>
+    </div>
+
+    <div class="card" onclick="showSection('salesHistory')">
+      <h3>Sales History</h3>
+      <p>View monthly sales data</p>
+    </div>
+  </div>
+
+  <!-- ========== Sections ========== -->
+
+  <section id="postMenu" class="section hidden">
+    <h2>Post Menu</h2>
+    <form id="menuForm">
+      <input type="text" id="menuDate" placeholder="Select Date" required />
+      <input type="text" id="itemName" placeholder="Food Item Name" required />
+      <input type="number" id="price" placeholder="Price ₹" required />
+      <button type="submit">Post Menu</button>
+      <p id="menuMsg" class="msg"></p>
+    </form>
+  </section>
+
+  <section id="todayOrders" class="section hidden">
+    <h2>Today's Orders</h2>
+    <div id="summaryOrders"></div>
+    <button onclick="fetchDetailedOrders()">See Detailed Orders</button>
+    <div id="detailedOrders" class="detailed"></div>
+  </section>
+
+  <section id="salesHistory" class="section hidden">
+    <h2>Sales History</h2>
+    <select id="monthSelector"></select>
+    <div id="salesData"></div>
+  </section>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

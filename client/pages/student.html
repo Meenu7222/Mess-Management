@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Dashboard</title>
+  <link rel="stylesheet" href="student.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+<body>
+  <header>
+    <h1>Student Dashboard</h1>
+    <a href="index.html" id="logoutBtn" class="logout-button">Logout</a>
+  </header>
+
+  <main>
+    <div class="dashboard">
+      <div class="card" onclick="showSection('bookMenu')">
+        <h3>📋 Book Food</h3>
+      </div>
+      <div class="card" onclick="showSection('cancelOrder')">
+        <h3>❌ Cancel Order</h3>
+      </div>
+      <div class="card" onclick="showSection('viewOrders')">
+        <h3>📜 View Orders</h3>
+      </div>
+    </div>
+
+    <!-- Booking Section -->
+    <div id="bookMenu" class="section hidden">
+      <h3>Book Food Item</h3>
+      <input type="text" id="bookDate" placeholder="Select Date" />
+      <div id="menuItems"></div>
+      <button id="submitBooking">Submit Booking</button>
+      <p class="msg" id="bookMsg"></p>
+    </div>
+
+    <!-- Cancel Order Section -->
+    <div id="cancelOrder" class="section hidden">
+      <h3>Cancel Your Order</h3>
+      <div id="cancelList"></div>
+      <p class="msg" id="cancelMsg"></p>
+    </div>
+
+    <!-- View Orders Section -->
+    <div id="viewOrders" class="section hidden">
+      <h3>Your Order History</h3>
+      <div id="orderHistory"></div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="student.js"></script>
+</body>
+</html>

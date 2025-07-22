@@ -1,0 +1,113 @@
+/* admin.css */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f6f8;
+  color: #111;
+}
+
+header {
+  background-color: #2e7d32;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+#logoutBtn {
+  background: #ffffff;
+  color: #2e7d32;
+  padding: 8px 16px;
+  border: 2px solid #2e7d32;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+#logoutBtn:hover {
+  background-color: #2e7d32;
+  color: white;
+}
+
+.dashboard {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 2rem;
+  width: 260px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: 0.3s ease;
+  text-align: center;
+}
+
+.card:hover {
+  border-color: #2e7d32;
+  transform: translateY(-2px);
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #2e7d32;
+}
+
+.section {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.1);
+}
+
+.hidden {
+  display: none;
+}
+
+input, select, button {
+  display: block;
+  width: 100%;
+  margin: 1rem 0;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+button:hover {
+  background-color: #27642a;
+}
+
+.msg {
+  color: #2e7d32;
+  font-weight: bold;
+}
+
+#summaryOrders, #detailedOrders, #salesData {
+  margin-top: 1rem;
+}
